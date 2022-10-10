@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            body {
+                font-family: "Segoe UI",Arial,sans-serif;
+                font-size: 110%;
+                max-width: 800px;
+                margin: auto;
+                background-color: #EBF2FA;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                margin-bottom: 15px;
+                color: orange;
+            }
+
+            label {
+                display: block;
+                position: relative;
+                padding-left: 15px;
+                margin-bottom: 15px;
+                cursor: pointer;
+            }
+
+            /* Hiding the initial checkbox */
+            input[type=checkbox] {
+                visibility: hidden;
+            }
+            /* Creating a custom checkbox based on demand */
+            .w3docs {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: orange;
+            }
+            /* Specify the background color to be shown when hovering over checkbox */
+            label:hover input ~ .w3docs {
+                background-color: rgb(236, 187, 96);
+            }
+            /* Specify the background color to be shown when checkbox is active */
+            label input:active ~ .w3docs {
+                background-color: white;
+            }
+            /* Specify the background color to be shown when checkbox is checked */
+            label input:checked ~ .w3docs {
+                background-color: rgb(180, 206, 235);
+            }
+            /* Checkmark to be shown in checkbox */
+            /* It is not be shown when not checked */
+            .w3docs:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            /* Display checkmark when checked */
+            label input:checked ~ .w3docs:after {
+                display: block;
+            }
+            /* Styling the checkmark using webkit */
+            /* Rotated the rectangle by 45 degree and 
+            showing only two border to make it look
+            like a tickmark */
+            label .w3docs:after {
+                left: 8px;
+                bottom: 5px;
+                width: 6px;
+                height: 12px;
+                border: solid white;
+                border-width: 0 4px 4px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1> Utazás-ellenőrzőlista </h1>
+        <h3> Miről gondoskodjon 2 héttel az indulás előtt: </h3>
+        <label><input type="checkbox"><span class="w3docs"></span> Személyi igazolványát ill. útlevelél ellenőrzés - még 6 hónapig érvényesnek kell lennie </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Vízum (ha szükséges) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Sofőröknek: esetleges nemzetközi jogosítvány és zöldkártya </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Gondoskodás a háziállatokról és a növényekről </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Rendszeres házhozszállítások lemondása és a postaláda ürítések megszervezése </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Oltások érvényességének felülvizsgálata (a háziállatnál is), oltási bizonyítványok előkészítése </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Biztosítás (baleset, betegség, poggyász, lemondás) </label>
+        <h3> Röviddel az indulás előtt: </h3>
+        <label><input type="checkbox"><span class="w3docs"></span> Deviza készpénz </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Gépjármű és működésének ellenőrzése (kis műhelykontroll - motorolaj, fagyálló ablakmosó folyadék, szervóolaj, hűtőfolyadék ellenőrzése) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Térkép letöltése (ha nem lesz mobilinternetünk külföldön) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Elérhetőségek beszerzése szükségesetre (konzulátus, holiday home stb.) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Mobiltelefon használatának beállítása külföldön (Roaming) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Útlevél és egyéb személyes iratok többszörös másolata (minden táskában legyen egy) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Becsekkolás, repülőjegy nyomtatása </label>
+        <label><input type="checkbox"><span class="w3docs"></span> PCR teszt </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Értékesebb fényképezőgép, műszaki cikk esetén azok gyári száma ‒ lopás, elvesztés esetén jó ezeket felvezetni a rendőri jegyzőkönyvre, könnyebb lesz itthon az ügyintézés a biztosítóval. </label>
+        <h3> Az elutazás napján: </h3>
+        <label><input type="checkbox"><span class="w3docs"></span> Víz, gáz, fűtés elzárása, hűtőszekrény, elektromos készülékek áramtalanítása </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Papucs </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Fogkefe </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Laptop, töltő, USB elosztó, egér </label>
+        <h3> Poggyász </h3>
+        <h5> 1. Testápolás/kozmetika: </h5>
+        <label><input type="checkbox"><span class="w3docs"></span> Szappan, tusfürdő, sampon, fogkefe/-krém, fésű, deo </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Borotva, tükör, hajszárító, törölköző </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Naptej, kontaktlencseápoló, hajzselé/-lakk, parfüm </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Tampon/betét, sminkeszközök, hajcsat/-gumi </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Zsebkendő </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Körömreszelő/-olló </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Szájmaszk </label>
+        <h5> 2. Egyéb: </h5>
+        <label><input type="checkbox"><span class="w3docs"></span> Hálózati átalakító, kompakt elosztó </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Szabadidő-, sport-, esti-, túraruházat </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Fehérnemű, zokni, harisnya </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Pizsama </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Sport-, túra-, eső, fürdő- és otthoni cipő </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Esernyő </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Evőeszköz </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Strandgyékény </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Sapka/Kalap </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Fürdőholmik </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Jegyzetfüzet, írószer </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Konzervnyitó/Dugóhúzó </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Fényképezőgép </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Elemek/Akkuk </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Gumimatrac </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Cipőtisztító szerek </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Búvárszemüveg/búvárpipa, uszony/búvárengedély </label>
+        <h5> 3. Kézipoggyász: </h5>
+        <label><input type="checkbox"><span class="w3docs"></span> Pénz, bankkártyák </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Útlevél/jogosítvány, oltási bizonyítvány </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Biztosítás, lakáskulcs </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Segélyhívó számok </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Visszaigazolások (hotel, komp, foglalás) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Külföldi betegbiztosítás </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Napszemüveg, rágógumi </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Fényképezőgép, mobiltelefon </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Étel/Ital </label>
+        <h5> 4. Utazó gyógyszertár: </h5>
+        <label><input type="checkbox"><span class="w3docs"></span> A tartalmat ellenőrizni, száraz és hőálló helyre pakolni </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Pirulák és/vagy más gyógykészítmények </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Lázmérő szilárd csomagolásban </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Zajvédő (füldugó) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Hasmenés elleni és gyomorvédő szerek </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Napégés és szúnyogcsípés elleni szer </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Aspirin, fájdalomcsillapító </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Kötszer, sebtapasz, fertőtlenítőszer </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Fontos saját gyógyszerek </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Oltási füzet, véradóigazolvány </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Paracetamol -kúp </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Allergiagyógyszer </label>
+        <h5> 5. Utazás gyermekkel: </h5>
+        <label><input type="checkbox"><span class="w3docs"></span> Étkészlet </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Pelenka, bili </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Késztea/-tej </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Készétel (pohárka) </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Üveg </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Krém </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Törlőkendő </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Cucli/Cumi </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Naptej </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Gumicsizma </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Babyphone </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Gyermekkazetta/CD </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Gyermekbiztosítás </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Éjszakai világítás </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Gyermekkocsi/Gyermekhordozó </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Játékóra </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Játékok, a homokhoz is </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Karúszó </label>
+        <label><input type="checkbox"><span class="w3docs"></span> Búvárszemüveg/búvárpipa, uszony/búvárengedély </label>
+                
+    </body>
+</html>
